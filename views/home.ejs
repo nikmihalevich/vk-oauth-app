@@ -1,0 +1,21 @@
+<%- include('header')%>
+
+<% if (user) { %> 
+	<div class="album py-5">
+		<div class="container">
+		    <div class="row">
+				<% if (friends.length) { %> 
+					<% friends.forEach(function(friend) { %> 
+						<%- include('friendCard', {friend: friend}); %>
+					<% }); %> 
+				<% } else { %>
+		    		<h2>Ваш список друзей пуст!</h2>
+		    	<% } %>
+		    </div>
+		</div>
+	</div>
+<% } else { %>
+	<%- include('loginForm')%>
+ <% } %> 
+
+<%- include('footer')%>

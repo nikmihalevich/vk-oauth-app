@@ -1,0 +1,15 @@
+<%- include('header')%>
+
+<div class="album py-5">
+    <div class="container">
+        <div class="row">
+            <% if (message) { %>
+		        <h2 class="mb-4 mr-auto ml-auto"><%= message %></h2>
+		        <pre class="text-left">
+		            <%= stack %>
+		        </pre>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%- include('footer')%>
